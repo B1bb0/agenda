@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Agenda de Contatos</h1>
+        </header>
+        <hr>
+        <form id="form-cadastro">
+            <input type="text" id="nome-contato" required placeholder="Nome" />
+            <input type="tel" id="numero-contato" required placeholder="(00) 00000-0000" />
+            <input type="email" id="email-contato" required placeholder="Email"/> 
+            <textarea id="anotacao-contato" placeholder="Anotação"></textarea>
+            <button type="submit" id="btn-add">Adicionar</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Contato<img src="./images/contatos.png" alt="ícone contatos"></th>
+                    <th>Telefone<img src="./images/telefone.png" alt="ícone telefone"></th>
+                    <th>Email<img src="./images/email.png" alt="ícone email"></th>
+                    <th>Anotação<img src="./images/anotacao.png" alt="ícone anotação"></th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gilson</td>
+                    <td>(79) 00000-0000</td>
+                    <td>gilson@gmail.com</td>
+                    <td>Vizinho</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
