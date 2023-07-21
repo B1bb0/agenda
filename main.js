@@ -1,6 +1,7 @@
 const form = document.getElementById("form-cadastro");
-form.addEventListener('submit', function(e) {
+let linhas = '';
 
+form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const inputNomeContato = document.getElementById('nome-contato');
@@ -8,14 +9,20 @@ form.addEventListener('submit', function(e) {
     const inputEmailContato = document.getElementById('email-contato');
     const inputAnotacaoContato = document.getElementById('anotacao-contato');
 
-    let linha = `<tr>`;
+    let linha = '<tr>';
     linha += `<td> ${inputNomeContato.value} </td>`;
     linha += `<td> ${inputNumeroContato.value} </td>`;
-    linha += `<td> ${intdutEmailContato.value} </td>`;
+    linha += `<td> ${inputEmailContato.value} </td>`;
     linha += `<td> ${inputAnotacaoContato.value} </td>`;
-    linha += `<tr>`;
+    linha += '<tr>';
 
-    const corpoTabela = document.getElementsByClassName('contatos');
-    corpoTabela.innerHTML = linha;
+    linhas += linha;
 
+    const corpoTabela = document.querySelector('tbody');
+    corpoTabela.innerHTML = linhas;
+
+    inputNomeContato.value = '';
+    inputNumeroContato.value = '';
+    inputEmailContato.value = '';
+    inputAnotacaoContato.value = '';
 });
